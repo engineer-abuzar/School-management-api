@@ -19,7 +19,7 @@ if (isNaN(userLatitude) || isNaN(userLongitude)) {
 
     const {latitude}=Element
     const {longitude}=Element
-    const distance=getDistance({latitude:`${latitude}`,longitude:`${longitude}`},{latitude:userLatitude,longitude:userLongitude})
+    const distance=getDistance({latitude:`${latitude}`,longitude:`${longitude}`},{latitude:userLatitude,longitude:userLongitude})/1000
 
     return {...Element,distance}
 

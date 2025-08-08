@@ -6,10 +6,8 @@ const port=process.env.port||3000
 
 app.use(express.json())
 
-app.get('/',(req,res)=>{
-    res.send("Api started")
-})
-app.use('/api',schoolRoutes)
+
+app.use('/',schoolRoutes)
 
 
 

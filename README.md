@@ -63,7 +63,7 @@ Returns a list of schools sorted by distance (nearest first) from the provided u
     "address": "123 Main Street, Delhi",
     "latitude": 28.6139,
     "longitude": 77.2090,
-    "distance": 1243 // in meters
+    "distance": 1243 // in km
   },
   ...
 ]

@@ -7,9 +7,7 @@ const schoolRoutes=Router()
 
 //routes for incoming requests
 schoolRoutes.get('/listSchools',listSchools)
-// schoolRoutes.get('/listSchools',(req,res)=>{
-//     res.send("List schools")
-// })
+
 schoolRoutes.post('/addSchools',checkTypes,addSchool)
 schoolRoutes.get('/',(req,res)=>{
     res.send("Api wroking")

@@ -16,6 +16,6 @@ const addSchool = (req, res) => {
         return res.send(validationErrors)
     }
     const result= connection.execute(`insert into schoolsdata(name,address,latitude,longitude) values(?,?,?,?)`,values)
-    res.send("Data inserted success")
+    res.send("School Added succesfully")
 }
 export default addSchool;

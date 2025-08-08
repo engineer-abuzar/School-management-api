@@ -1,9 +1,11 @@
 import connection from "../db.js";
 import { getDistance } from "geolib";
 const listSchools=async (req,res)=>{
-    const dataFromDb= (await connection.execute('select * from schoolsdata'))[0]
     let editedData
 
+    try{
+    const dataFromDb= (await connection.execute('select * from schoolsdata'))[0]
+        console.log(dataFromDb)
 
 
     const userLatitude=parseFloat(req.query.latitude)
@@ -24,6 +26,9 @@ if (isNaN(userLatitude) || isNaN(userLongitude)) {
     })
 
    editedData.sort((a,b)=>a.distance-b.distance)
+}catch(err){
+    console.log("the error is ",err)
+}
 
     res.send(editedData)
 }

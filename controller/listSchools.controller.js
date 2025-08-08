@@ -1,7 +1,7 @@
 import connection from "../db.js";
 import { getDistance } from "geolib";
 const listSchools=async (req,res)=>{
-    let editedData
+    let editedData;
 
     try{
     const dataFromDb= (await connection.execute('select * from schoolsdata'))[0]
